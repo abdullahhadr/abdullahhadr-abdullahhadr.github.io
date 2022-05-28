@@ -1,9 +1,10 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>LOGIN FORM</title>
+    <head>
+        <title>
+            Login Form Using local storage js-part3
+        </title>
 
-    <style>
+        <style>
       * {
       box-sizing: border-box;
       }
@@ -116,7 +117,48 @@
       }
     </style>
     <!DOCTYPE html> <html> <head> <title>HTML Backgorund Color</title>
-    </head> <body style="background-color:#3a88fe;">
+    </head>
+    <script type="text/javascript">
+
+// Description: Randomly change background color every 5 seconds
+
+function setbackground()
+{
+window.setTimeout( "setbackground()", 700); // 5000 milliseconds delay
+
+var index = Math.round(Math.random() * 9);
+
+var ColorValue = "FFFFFF"; // default color - white (index = 0)
+
+if(index == 1)
+ColorValue = "FFCCCC"; //peach
+if(index == 2)
+ColorValue = "CCAFFF"; //violet
+if(index == 3)
+ColorValue = "A6BEFF"; //lt blue
+if(index == 4)
+ColorValue = "99FFFF"; //cyan
+if(index == 5)
+ColorValue = "D5CCBB"; //tan
+if(index == 6)
+ColorValue = "99FF99"; //lt green
+if(index == 7)
+ColorValue = "FFFF99"; //lt yellow
+if(index == 8)
+ColorValue = "FFCC99"; //lt orange
+if(index == 9)
+ColorValue = "CCCCCC"; //lt grey
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+
+}
+</script>
+
+
+</head>
+<body onload="setbackground();">
+</body>
+</html>
   </head>
   <body>
     <p></p>
@@ -124,16 +166,54 @@
     <form action="/" class="decor">
       <div class="form-inner">
         <h1>Login</h1>
-        <input type="Username or email" placeholder="Username or Email" id="Username" required>
-        <input type="password" placeholder="Password" id="password" required>
-        <button type="submit" href="/">Login</button>
-        <br>
-        <br>
-        <div class="container">
-  <div class="vertical-center">
-    
-        <a href="/abdullahhadr.github.io" class="button button1">Home</a>
+
+
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="psw" placeholder="Enter password" name="pwd">
+          </div>
+
+          <button type="button" onclick="saveData()" id="save_btn" class="btn btn-default">Submit</button>
+        </form>
       </div>
-    </form>
-  </body>
-</html>
+
+      </body>
+      <script>
+         let name=localStorage.getItem('name')?localStorage.getItem('name'):''
+        console.log(name);
+        if(name!='')
+        {
+          alert('Please visit profile');
+          window.location.href="profile.html";
+        }
+function saveData()
+{
+let email,psw;
+email=document.getElementById("email").value;
+
+psw=document.getElementById("psw").value;
+
+let user_records=new Array();
+user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+if(user_records.some((v)=>{return v.email==email && v.psw==psw}))
+{
+  alert("Login Pass");
+  let current_user=user_records.filter((v)=>{return v.email==email && v.psw==psw})[0]
+ localStorage.setItem('name',current_user.name);
+ localStorage.setItem('email',current_user.email);
+  window.location.href="profile.html"
+}
+else
+{
+  alert('Login Fail');
+}
+
+}
+          </script>
+      </html>
+      
