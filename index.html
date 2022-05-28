@@ -26,8 +26,48 @@
 }
 </style>
 <!DOCTYPE html> <html> <head> <title>HTML Backgorund Color</title>
-</head> <body style="background-color:Grey;">
-  <h1>Landing Page</h1> <p>This is the Landing Page, designed only using basic HTML and CSS code. This contains Signup and Login Forms.</p>
+</head>
+<script type="text/javascript">
+
+
+function setbackground()
+{
+window.setTimeout( "setbackground()", 700);
+
+var index = Math.round(Math.random() * 9);
+
+var ColorValue = "FFFFFF";
+
+if(index == 1)
+ColorValue = "FFCCCC";
+if(index == 2)
+ColorValue = "CCAFFF";
+if(index == 3)
+ColorValue = "A6BEFF";
+if(index == 4)
+ColorValue = "99FFFF";
+if(index == 5)
+ColorValue = "D5CCBB";
+if(index == 6)
+ColorValue = "99FF99";
+if(index == 7)
+ColorValue = "FFFF99";
+if(index == 8)
+ColorValue = "FFCC99";
+if(index == 9)
+ColorValue = "CCCCCC";
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+
+}
+</script>
+
+
+</head>
+<body onload="setbackground();">
+</body>
+</html>
+  <h1>Landing Page</h1> <p>This is the Landing Page, designed only using basic HTML and CSS code. This contains Signup and Login Forms updated as mentioned in assignment 2.</p>
 </body>
 </html>
 </head>
@@ -36,7 +76,7 @@
   <form action="/" class="decor">
     <div class="form-inner">
 <a href="/login1.html" class="button button1">Login</a>
-<a href="/signup1.html" class="button button2"> SIGNUP</a><br>
+<a href="/registration.html" class="button button2"> SIGNUP</a><br>
 <br>
 <br>
 <br>
@@ -53,4 +93,4 @@
 
 
 </body>
-</html> 
+</html>
