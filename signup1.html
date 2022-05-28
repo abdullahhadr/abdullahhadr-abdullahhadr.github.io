@@ -1,142 +1,228 @@
-
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>SIGN UP</title>
+    <head>
+        <title>
+            Reg. Form Using local storage js-part4
+        </title>
 
-    <style>
-      * {
-      box-sizing: border-box;
-      }
-      html, body {
-      min-height: 100vh;
-      padding: 0;
-      margin: 0;
-      font-family: Helvetica, Helvetica, Helvetica;
-      font-size: 20px;
-      color: #ffffff;
-      }
-      textarea {
-      outline: none;
-      }
-      body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      background: #3a88fe;
-      }
-      h1 {
-      margin-top: 0;
-      font-weight: 500;
-      }
-      form {
-      position: relative;
-      width: 40%;
-      border-radius: 25px;
-      background: #3a88fe;
-      }
-      .form-left-decoration,
-      .form-right-decoration {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 20px;
-      border-radius: 20px;
-      background: #5a7233;
-      }
-      .form-left-decoration {
-      bottom: 60px;
-      left: -30px;
-      }
-      .form-right-decoration {
-      top: 60px;
-      right: -30px;
-      }
-      .form-left-decoration:before,
-      .form-left-decoration:after,
-      .form-right-decoration:before,
-      .form-right-decoration:after {
-      content: "";
-      position: absolute;
-      width: 50px;
-      height: 20px;
-      border-radius: 30px;
-      background: #FF0040;
-      }
+        <style>
+              * {
+              box-sizing: border-box;
+              }
+              html, body {
+              min-height: 100vh;
+              padding: 0;
+              margin: 0;
+              font-family: Helvetica, Helvetica, Helvetica;
+              font-size: 20px;
+              color: #ffffff;
+              }
+              textarea {
+              outline: none;
+              }
+              body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 20px;
+              background: #3a88fe;
+              }
+              h1 {
+              margin-top: 0;
+              font-weight: 500;
+              }
+              form {
+              position: relative;
+              width: 40%;
+              border-radius: 25px;
+              background: #3a88fe;
+              }
+              .form-left-decoration,
+              .form-right-decoration {
+              content: "";
+              position: absolute;
+              width: 40px;
+              height: 20px;
+              border-radius: 20px;
+              background: #5a7233;
+              }
+              .form-left-decoration {
+              bottom: 60px;
+              left: -30px;
+              }
+              .form-right-decoration {
+              top: 60px;
+              right: -30px;
+              }
+              .form-left-decoration:before,
+              .form-left-decoration:after,
+              .form-right-decoration:before,
+              .form-right-decoration:after {
+              content: "";
+              position: absolute;
+              width: 50px;
+              height: 20px;
+              border-radius: 30px;
+              background: #FF0040;
+              }
 
-      .circle {
-      position: absolute;
-      bottom: 80px;
-      left: -55px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #fff;
-      }
-      .form-inner {
-      padding: 40px;
-      }
-      .form-inner input,
-      .form-inner textarea {
-      display: circle;
-      width: 100%;
-      padding: 20px;
-      margin-bottom: 10px;
-      border: none;
-      border-radius: 22px;
-      background: #d0dfe8;
-      }
-      .form-inner textarea {
-      resize: none;
-      }
-      button {
-      width: 100%;
-      padding: 18px;
-      margin-top: 22px;
-      border-radius: 22px;
-      border: none;
-      border-bottom: 4px solid #000000;
-      background: #000000;
-      font-size: 16px;
-      font-weight: 400;
-      color: #EFFBEF;
-      }
-      .button {
-        color: #ffffff;
-        background-color: #2d63c8;
-        font-size: 19px;
-        border: 1px solid #2d63c8;
-        padding: 15px 50px;
-        cursor: pointer
-      }
-      .button:hover {
-        color: #0056d6;
-        background-color: #ffffff;
-      }
-      }
-    </style>
-    <!DOCTYPE html> <html> <head> <title>HTML Backgorund Color</title>
-    </head> <body style="background-color:#3a88fe;">
-  </head>
-  <body>
-    <p></p>
-
-    <form action="/" class="decor">
+              .circle {
+              position: absolute;
+              bottom: 80px;
+              left: -55px;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              background: #fff;
+              }
+              .form-inner {
+              padding: 40px;
+              }
+              .form-inner input,
+              .form-inner textarea {
+              display: circle;
+              width: 100%;
+              padding: 20px;
+              margin-bottom: 10px;
+              border: none;
+              border-radius: 22px;
+              background: #d0dfe8;
+              }
+              .form-inner textarea {
+              resize: none;
+              }
+              button {
+              width: 100%;
+              padding: 18px;
+              margin-top: 22px;
+              border-radius: 22px;
+              border: none;
+              border-bottom: 4px solid #000000;
+              background: #000000;
+              font-size: 16px;
+              font-weight: 400;
+              color: #EFFBEF;
+              }
+              .button {
+                color: #ffffff;
+                background-color: #2d63c8;
+                font-size: 19px;
+                border: 1px solid #2d63c8;
+                padding: 15px 50px;
+                cursor: pointer
+              }
+              .button:hover {
+                color: #0056d6;
+                background-color: #ffffff;
+              }
+              }
+            </style>
+            <!DOCTYPE html> <html> <head> <title>HTML Backgorund Color</title>
+            </head> <body style="background-color:#3a88fe;">
+          </head>
+          <body>
+            <p></p>
+            <form action="/" class="decor">
       <div class="form-inner">
         <h1>Login</h1>
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Username">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password" id="password" required>
-        <input type="password" placeholder="Confirm Password" id="confirm_password" required>
-        <button type="submit" href="/">Submit</button>
-<br>
+
+
+
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+
+      <div class="container">
+        <div class="col-sm-6" style="border: 1px solid gray;">
+        <h2>Reg. Form</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter email" name="email">
+              </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="psw" placeholder="Enter password" name="pwd">
+          </div>
+
+          <button type="button" onclick="saveData()" id="save_btn" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+      <div class="col-sm-6" style="border: 1px solid gray;">
+        <h2 style="text-align: center;">Users Table</h2>
+        <div class="row">
+          <div class="col-sm-4" style="background-color: #ffdc5c;padding: 10px;">Name</div>
+          <div class="col-sm-4" style="background-color: #38b7ff;padding: 10px;">Email</div>
+          <div class="col-sm-4" style="background-color: #ff914d;padding: 10px;">Password</div>
+
+        </div>
+        <div id="showUsers"></div>
+      </div>
+      </div>
+
+      </body>
+      <script>
+        showData();
+function saveData()
+{
+let name,email,psw;
+name=document.getElementById("name").value;
+email=document.getElementById("email").value;
+
+psw=document.getElementById("psw").value;
+
+let user_records=new Array();
+user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+if(user_records.some((v)=>{return v.email==email}))
+{
+  alert("duplicate data");
+}
+else
+{
+  user_records.push({
+  "name":name,
+  "email":email,
+  "psw":psw
+})
+localStorage.setItem("users",JSON.stringify(user_records));
+}
+showData();
+}
+
+function showData()
+{
+  document.getElementById("showUsers").innerHTML="";
+  let user_records=new Array();
+user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+  if(user_records)
+  {
+    for(let i=0;i<user_records.length;i++)
+    {
+      let addDiv=document.createElement('div');
+  addDiv.className="row";
+  addDiv.innerHTML='  <div class="col-sm-4" style="padding: 10px;">'+user_records[i].name+'</div><div class="col-sm-4" style="padding: 10px;">'+user_records[i].email+'</div><div class="col-sm-4" style="padding: 10px;">'+user_records[i].psw+'</div>';
+  document.getElementById("showUsers").appendChild(addDiv);
+
+    }
+  }
+  }
+          </script>
+      </html>
+      <br>
         <br>
         <div class="container">
   <div class="vertical-center">
 
-        <a href="/abdullahhadr.github.io" class="button button1">Home</a>
+        <a href="abdullahhadr.github.io class="button button1">Home</a>
       </div>
     </form>
   </body>
