@@ -1,14 +1,14 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+ const firebaseConfig = {
+    apiKey: "AIzaSyC9jQDteXzt7KUEXfDuPXj-6lXKvOSCSqI",
+    authDomain: "login-using-firebase-3f3fb.firebaseapp.com",
+    projectId: "login-using-firebase-3f3fb",
+    storageBucket: "login-using-firebase-3f3fb.appspot.com",
+    messagingSenderId: "223754359778",
+    appId: "1:223754359778:web:1604cfcd91e4d959675fbb"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 // Initialize variables
 const auth = firebase.auth()
 const database = firebase.database()
